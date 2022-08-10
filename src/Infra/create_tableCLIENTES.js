@@ -1,5 +1,5 @@
 import sqlite3 from "sqlite3";
-const bd = new sqlite3.Database('./clientes.db');
+const bd = new sqlite3.Database(path.resolve(__dirname, "db.sqlite"));
 
 const CREATE =
 `
@@ -24,13 +24,13 @@ const INSERT =
 
 function create() {
     bd.run(CREATE, (error) => {
-        if(error) console.log(error);
+        if(error) console.log("Erro ao criar tabela", error);
     });
 }
 
 function insert(){
     bd.run(INSERT,(error) => {
-        if(error)console.log('erro ao criar tabela', error);
+        if(error)console.log('Erro ao popular tabela', error);
     });
 }
 

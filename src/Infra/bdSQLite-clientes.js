@@ -1,5 +1,5 @@
 import sqlite3 from 'sqlite3';
-const bdSQLite = new sqlite3.Database('./src/infra/clientes.db');
+const bdSQLite = new sqlite3.Database(path.resolve(__dirname, "db.sqlite"));
 
 
 //Processamento de sinal
