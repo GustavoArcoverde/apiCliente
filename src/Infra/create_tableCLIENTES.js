@@ -1,5 +1,5 @@
 import sqlite3 from "sqlite3";
-const bd = new sqlite3.Database('./clientes.db');
+const bd = new sqlite3.Database('./src/infra/clientes.db');
 
 const CREATE =
 `
